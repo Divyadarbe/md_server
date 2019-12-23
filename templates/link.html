@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>File List</title>
+</head>
+<body>
+    <ul>
+    {% for file in md_files %}
+        <li>
+            <a href='{{ url_for("render", file=file) }}'>{{ file }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
